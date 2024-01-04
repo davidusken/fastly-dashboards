@@ -1,9 +1,23 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
   "annotations": {
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+      },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -28,7 +42,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "Number of user requests delivered from cache.",
       "format": "locale",
       "gauge": {
@@ -113,7 +130,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "Average millisecond interval from a cache receiving a HTTP request to it sending a cached response's first byte. Also know as Time-To-First-Byte (TTFB).",
       "format": "none",
       "gauge": {
@@ -198,7 +218,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "decimals": null,
       "description": "Number of user requests for objects not in cache (i.e. cache miss).",
       "format": "locale",
@@ -283,7 +306,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "Requests delivered from cache divided by the number of cacheable requests (hits + misses).",
       "format": "percentunit",
       "gauge": {
@@ -367,7 +393,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "decimals": null,
       "description": "Average ms interval from when a cache issues a HTTP request to the origin to when the response is received.",
       "format": "none",
@@ -453,7 +482,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "Total number of requests received in a second.",
       "format": "locale",
       "gauge": {
@@ -537,7 +569,10 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "Number of user requests producing an error.",
       "format": "locale",
       "gauge": {
@@ -638,7 +673,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "The total number of requests that were received for your site by Fastly.",
       "fill": 1,
       "fillGradient": 0,
@@ -765,7 +803,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "This number reflects a variety of errors, which can include calls on vcl_error.",
       "fill": 1,
       "fillGradient": 0,
@@ -860,7 +901,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "Hit ratio is defined as the proportion if cache hits to all cacheable content (hits + misses). Increasing your hit ratio improves the overall performance benefit of using Fastly.",
       "fill": 1,
       "fillGradient": 0,
@@ -952,7 +996,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "The amount of bandwidth served for you site by Fastly.",
       "fill": 1,
       "fillGradient": 0,
@@ -1121,7 +1168,10 @@
             "$__all"
           ]
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": true,
@@ -1148,7 +1198,10 @@
             "$__all"
           ]
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": true,
@@ -1175,7 +1228,10 @@
             "$__all"
           ]
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": true,
